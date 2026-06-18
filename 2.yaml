@@ -1,0 +1,247 @@
+proxies:
+  - name: "MALAYSIA VVIP-dt179ayxa0"
+    type: "vless"
+    server: malay.hydracore.tech
+    port: 8080
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "http"
+    encryption: "none"
+    udp: true
+    http-opts:
+      path:
+        - "/mideaservices"
+      headers:
+        Host:
+          - "malay.hydracore.tech"
+
+  - name: "🇹🇭THAI VIP@THAILAND-dt179ayxa0"
+    type: "vless"
+    server: thai.hydracore.tech
+    port: 443
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "grpc"
+    servername: "thai.hydracore.tech"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "h2"
+      - "http/1.1"
+    grpc-opts:
+      grpc-service-name: "Premium-Service"
+
+  - name: "🇹🇭THAI VVIP@THAILAND-dt179ayxa0"
+    type: "vless"
+    server: thai.hydracore.tech
+    port: 8080
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "http"
+    encryption: "none"
+    udp: true
+    http-opts:
+      path:
+        - "/playing-services"
+      headers:
+        Host:
+          - "thai.hydracore.tech"
+
+  - name: "🇹🇭THAI 189@THAI 2-dt179ayxa0"
+    type: "vless"
+    server: th.hydracore.tech
+    port: 8080
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "http"
+    encryption: "none"
+    udp: true
+    http-opts:
+      path:
+        - "/playing-services"
+      headers:
+        Host:
+          - "th.hydracore.tech"
+
+  - name: "JAPAN-dt179ayxa0"
+    type: "vless"
+    server: jp.namso.online
+    port: 2083
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "ws"
+    servername: "jp.namso.online"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "http/1.1"
+      - "h2"
+    ws-opts:
+      path: "/playing-services"
+      headers:
+        Host: "jp.namso.online"
+
+  - name: "UNITED STATE VVIP-dt179ayxa0"
+    type: "vless"
+    server: us.mmpremium.tech
+    port: 8080
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "http"
+    encryption: "none"
+    udp: true
+    http-opts:
+      path:
+        - "/media-stream"
+      headers:
+        Host:
+          - "us.mmpremium.tech"
+
+  - name: "SINGAPORE VIP-dt179ayxa0-7D,14H⏳"
+    type: "vless"
+    server: sg.hydracore.tech
+    port: 443
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "http"
+    servername: "sg.hydracore.tech"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "h2"
+      - "http/1.1"
+    http-opts:
+      path:
+        - "/streamingservices"
+      headers:
+        Host:
+          - "sg.hydracore.tech"
+
+  - name: "SINGAPORE VVIP-dt179ayxa0"
+    type: "vless"
+    server: sg.hydracore.tech
+    port: 2083
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "ws"
+    servername: "sg.hydracore.tech"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/playingservices"
+      headers:
+        Host: "sg.hydracore.tech"
+
+  - name: "MALAYSIA VIP-dt179ayxa0"
+    type: "vless"
+    server: malay.hydracore.tech
+    port: 443
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "ws"
+    servername: "malay.hydracore.tech"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/playing-services"
+      headers:
+        Host: "malay.hydracore.tech"
+
+  - name: "UNITED STATE VIP-dt179ayxa0"
+    type: "vless"
+    server: us.mmpremium.tech
+    port: 443
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "ws"
+    servername: "us.mmpremium.tech"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/meida-stream"
+      headers:
+        Host: "us.mmpremium.tech"
+
+  - name: "INDO VIP@INDONESIA-dt179ayxa0"
+    type: "vless"
+    server: indo.mmpremium.tech
+    port: 443
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "http"
+    servername: "indo.mmpremium.tech"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "h2"
+      - "http/1.1"
+    http-opts:
+      path:
+        - "/mediastreaming"
+      headers:
+        Host:
+          - "indo.mmpremium.tech"
+
+  - name: "INDO VVIP@INDONESIA-dt179ayxa0"
+    type: "vless"
+    server: indo.mmpremium.tech
+    port: 2083
+    uuid: "2a8260b6-3922-46e3-ae0f-7b8d7e5dcdf5"
+    network: "ws"
+    servername: "indo.mmpremium.tech"
+    client-fingerprint: "chrome"
+    encryption: "none"
+    tls: true
+    udp: true
+    alpn:
+      - "h2"
+      - "http/1.1"
+    ws-opts:
+      path: "/mediastreaming"
+      headers:
+        Host: "indo.mmpremium.tech"
+
+proxy-providers:
+  sub-1:
+    type: http
+    url: "https://m.mpreium.com/api/sub/Bot2"
+    interval: 3600
+    path: ./providers/sub-1.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+proxy-groups:
+  - name: auto
+    type: select
+    proxies:
+    - "MALAYSIA VVIP-dt179ayxa0"
+    - "🇹🇭THAI VIP@THAILAND-dt179ayxa0"
+    - "🇹🇭THAI VVIP@THAILAND-dt179ayxa0"
+    - "🇹🇭THAI 189@THAI 2-dt179ayxa0"
+    - "JAPAN-dt179ayxa0"
+    - "UNITED STATE VVIP-dt179ayxa0"
+    - "SINGAPORE VIP-dt179ayxa0-7D,14H⏳"
+    - "SINGAPORE VVIP-dt179ayxa0"
+    - "MALAYSIA VIP-dt179ayxa0"
+    - "UNITED STATE VIP-dt179ayxa0"
+    - "INDO VIP@INDONESIA-dt179ayxa0"
+    - "INDO VVIP@INDONESIA-dt179ayxa0"
+    use:
+    - "sub-1"
+
+rules:
+  - MATCH,auto
