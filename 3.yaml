@@ -1,247 +1,221 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+
 proxies:
-  - name: "MALAYSIA VVIP-xt8i2se94u"
-    type: "vless"
-    server: malay.hydracore.tech
-    port: 8080
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "http"
-    encryption: "none"
-    udp: true
-    http-opts:
-      path:
-        - "/mideaservices"
-      headers:
-        Host:
-          - "malay.hydracore.tech"
-
-  - name: "🇹🇭THAI VVIP@THAILAND-xt8i2se94u"
-    type: "vless"
-    server: thai.hydracore.tech
-    port: 8080
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "http"
-    encryption: "none"
-    udp: true
-    http-opts:
-      path:
-        - "/playing-services"
-      headers:
-        Host:
-          - "thai.hydracore.tech"
-
-  - name: "🇹🇭THAI 189@THAI 2-xt8i2se94u"
-    type: "vless"
-    server: th.hydracore.tech
-    port: 8080
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "http"
-    encryption: "none"
-    udp: true
-    http-opts:
-      path:
-        - "/playing-services"
-      headers:
-        Host:
-          - "th.hydracore.tech"
-
-  - name: "JAPAN-xt8i2se94u"
-    type: "vless"
-    server: jp.namso.online
-    port: 2083
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "ws"
-    servername: "jp.namso.online"
-    client-fingerprint: "chrome"
-    encryption: "none"
-    tls: true
-    udp: true
-    alpn:
-      - "http/1.1"
-      - "h2"
-    ws-opts:
-      path: "/playing-services"
-      headers:
-        Host: "jp.namso.online"
-
-  - name: "🇹🇭THAI VIP@THAILAND-xt8i2se94u"
-    type: "vless"
-    server: thai.hydracore.tech
-    port: 443
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "grpc"
-    servername: "thai.hydracore.tech"
-    client-fingerprint: "chrome"
-    encryption: "none"
-    tls: true
-    udp: true
-    alpn:
-      - "h2"
-      - "http/1.1"
-    grpc-opts:
-      grpc-service-name: "Premium-Service"
-
-  - name: "UNITED STATE VVIP-xt8i2se94u"
-    type: "vless"
-    server: us.mmpremium.tech
-    port: 8080
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "http"
-    encryption: "none"
-    udp: true
-    http-opts:
-      path:
-        - "/media-stream"
-      headers:
-        Host:
-          - "us.mmpremium.tech"
-
-  - name: "SINGAPORE VIP-xt8i2se94u-7D,14H⏳"
-    type: "vless"
+  - name: "SINGAPORE VIP-xt8i2se94u-6D"
+    type: vless
     server: sg.hydracore.tech
     port: 443
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "http"
-    servername: "sg.hydracore.tech"
-    client-fingerprint: "chrome"
-    encryption: "none"
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: httpupgrade
     tls: true
     udp: true
-    alpn:
-      - "h2"
-      - "http/1.1"
+    servername: sg.hydracore.tech
+    client-fingerprint: chrome
+    alpn: [h2, http/1.1]
+    skip-cert-verify: true
     http-opts:
-      path:
-        - "/streamingservices"
+      method: GET
+      path: ["/streamingservices"]
       headers:
-        Host:
-          - "sg.hydracore.tech"
+        Host: ["sg.hydracore.tech"]
 
   - name: "SINGAPORE VVIP-xt8i2se94u"
-    type: "vless"
+    type: vless
     server: sg.hydracore.tech
     port: 2083
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "ws"
-    servername: "sg.hydracore.tech"
-    client-fingerprint: "chrome"
-    encryption: "none"
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: ws
     tls: true
     udp: true
-    alpn:
-      - "h2"
-      - "http/1.1"
+    servername: sg.hydracore.tech
+    client-fingerprint: chrome
+    alpn: [h2, http/1.1]
+    skip-cert-verify: true
     ws-opts:
       path: "/playingservices"
       headers:
-        Host: "sg.hydracore.tech"
+        Host: sg.hydracore.tech
 
-  - name: "MALAYSIA VIP-xt8i2se94u"
-    type: "vless"
-    server: malay.hydracore.tech
+  - name: "THAI VIP@THAILAND-xt8i2se94u"
+    type: vless
+    server: thai.hydracore.tech
     port: 443
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "ws"
-    servername: "malay.hydracore.tech"
-    client-fingerprint: "chrome"
-    encryption: "none"
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: grpc
     tls: true
     udp: true
-    alpn:
-      - "h2"
-      - "http/1.1"
+    servername: thai.hydracore.tech
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    grpc-opts:
+      grpc-service-name: "Premium-Service"
+
+  - name: "THAI VVIP@THAILAND-xt8i2se94u"
+    type: vless
+    server: thai.hydracore.tech
+    port: 8080
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: httpupgrade
+    tls: false
+    udp: true
+    http-opts:
+      method: GET
+      path: ["/playing-services"]
+      headers:
+        Host: ["thai.hydracore.tech"]
+
+  - name: "MALAYSIA VIP-xt8i2se94u"
+    type: vless
+    server: malay.hydracore.tech
+    port: 443
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: ws
+    tls: true
+    udp: true
+    servername: malay.hydracore.tech
+    client-fingerprint: chrome
+    alpn: [h2, http/1.1]
+    skip-cert-verify: true
     ws-opts:
       path: "/playing-services"
       headers:
-        Host: "malay.hydracore.tech"
+        Host: malay.hydracore.tech
 
-  - name: "UNITED STATE VIP-xt8i2se94u"
-    type: "vless"
-    server: us.mmpremium.tech
-    port: 443
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "ws"
-    servername: "us.mmpremium.tech"
-    client-fingerprint: "chrome"
-    encryption: "none"
+  - name: "MALAYSIA VVIP-xt8i2se94u"
+    type: vless
+    server: malay.hydracore.tech
+    port: 8080
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: httpupgrade
+    tls: false
+    udp: true
+    http-opts:
+      method: GET
+      path: ["/mideaservices"]
+      headers:
+        Host: ["malay.hydracore.tech"]
+
+  - name: "THAI 189@THAI 2-xt8i2se94u"
+    type: vless
+    server: th.hydracore.tech
+    port: 8080
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: httpupgrade
+    tls: false
+    udp: true
+    http-opts:
+      method: GET
+      path: ["/playing-services"]
+      headers:
+        Host: ["th.hydracore.tech"]
+
+  - name: "JAPAN-xt8i2se94u"
+    type: vless
+    server: jp.namso.online
+    port: 2083
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: ws
     tls: true
     udp: true
-    alpn:
-      - "h2"
-      - "http/1.1"
+    servername: jp.namso.online
+    client-fingerprint: chrome
+    alpn: [http/1.1, h2]
+    skip-cert-verify: true
+    ws-opts:
+      path: "/playing-services"
+      headers:
+        Host: jp.namso.online
+
+  - name: "UNITED STATE VIP-xt8i2se94u"
+    type: vless
+    server: us.mmpremium.tech
+    port: 443
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: ws
+    tls: true
+    udp: true
+    servername: us.mmpremium.tech
+    client-fingerprint: chrome
+    alpn: [h2, http/1.1]
+    skip-cert-verify: true
     ws-opts:
       path: "/meida-stream"
       headers:
-        Host: "us.mmpremium.tech"
+        Host: us.mmpremium.tech
+
+  - name: "UNITED STATE VVIP-xt8i2se94u"
+    type: vless
+    server: us.mmpremium.tech
+    port: 8080
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: httpupgrade
+    tls: false
+    udp: true
+    http-opts:
+      method: GET
+      path: ["/media-stream"]
+      headers:
+        Host: ["us.mmpremium.tech"]
 
   - name: "INDO VIP@INDONESIA-xt8i2se94u"
-    type: "vless"
+    type: vless
     server: indo.mmpremium.tech
     port: 443
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "http"
-    servername: "indo.mmpremium.tech"
-    client-fingerprint: "chrome"
-    encryption: "none"
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: httpupgrade
     tls: true
     udp: true
-    alpn:
-      - "h2"
-      - "http/1.1"
+    servername: indo.mmpremium.tech
+    client-fingerprint: chrome
+    alpn: [h2, http/1.1]
+    skip-cert-verify: true
     http-opts:
-      path:
-        - "/mediastreaming"
+      method: GET
+      path: ["/mediastreaming"]
       headers:
-        Host:
-          - "indo.mmpremium.tech"
+        Host: ["indo.mmpremium.tech"]
 
   - name: "INDO VVIP@INDONESIA-xt8i2se94u"
-    type: "vless"
+    type: vless
     server: indo.mmpremium.tech
     port: 2083
-    uuid: "381bfae3-bc61-4b39-ae1b-2dffccb30683"
-    network: "ws"
-    servername: "indo.mmpremium.tech"
-    client-fingerprint: "chrome"
-    encryption: "none"
+    uuid: 381bfae3-bc61-4b39-ae1b-2dffccb30683
+    network: ws
     tls: true
     udp: true
-    alpn:
-      - "h2"
-      - "http/1.1"
+    servername: indo.mmpremium.tech
+    client-fingerprint: chrome
+    alpn: [h2, http/1.1]
+    skip-cert-verify: true
     ws-opts:
       path: "/mediastreaming"
       headers:
-        Host: "indo.mmpremium.tech"
-
-proxy-providers:
-  sub-1:
-    type: http
-    url: "https://m.mpreium.com/api/sub/Bot"
-    interval: 3600
-    path: ./providers/sub-1.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
+        Host: indo.mmpremium.tech
 
 proxy-groups:
-  - name: auto
+  - name: GLOBAL
     type: select
     proxies:
-    - "MALAYSIA VVIP-xt8i2se94u"
-    - "🇹🇭THAI VVIP@THAILAND-xt8i2se94u"
-    - "🇹🇭THAI 189@THAI 2-xt8i2se94u"
-    - "JAPAN-xt8i2se94u"
-    - "🇹🇭THAI VIP@THAILAND-xt8i2se94u"
-    - "UNITED STATE VVIP-xt8i2se94u"
-    - "SINGAPORE VIP-xt8i2se94u-7D,14H⏳"
-    - "SINGAPORE VVIP-xt8i2se94u"
-    - "MALAYSIA VIP-xt8i2se94u"
-    - "UNITED STATE VIP-xt8i2se94u"
-    - "INDO VIP@INDONESIA-xt8i2se94u"
-    - "INDO VVIP@INDONESIA-xt8i2se94u"
-    use:
-    - "sub-1"
+      - SINGAPORE VVIP-xt8i2se94u
+      - SINGAPORE VIP-xt8i2se94u-6D
+      - MALAYSIA VIP-xt8i2se94u
+      - INDO VIP@INDONESIA-xt8i2se94u
+      - INDO VVIP@INDONESIA-xt8i2se94u
+      - JAPAN-xt8i2se94u
+      - THAI VIP@THAILAND-xt8i2se94u
+      - THAI VVIP@THAILAND-xt8i2se94u
+      - UNITED STATE VIP-xt8i2se94u
+      - MALAYSIA VVIP-xt8i2se94u
+      - THAI 189@THAI 2-xt8i2se94u
+      - UNITED STATE VVIP-xt8i2se94u
+      - DIRECT
+      - REJECT
+    selected: SINGAPORE VVIP-xt8i2se94u
 
 rules:
-  - MATCH,auto
+  - GEOIP,CN,DIRECT
+  - MATCH,GLOBAL
